@@ -10,7 +10,7 @@
         }
 
         body {
-            background-image: url('bartbootleg.png');
+            background-image: url('bootleg.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -65,8 +65,11 @@
 <body>
     <div id="container">
         <h1>Bootleg Barts</h1>
+        <a class="twitter-link" href="https://twitter.com/bootlegbarts" target="_blank">
+            <img class="twitter-logo" src="xlogo.png" alt="X">
+        </a>
         <p>In a collection of Bootleg Barts, will you be able to find the real bart...</p>
-
+        <p>one free and 0.002E for additional</p>
         <button class="mint-button" id="connectWalletButton">Connect Wallet</button>
         <button class="mint-button" id="disconnectWalletButton">Disconnect Wallet</button>
         <p id="connectedWallet"></p>
@@ -118,7 +121,7 @@
       async function getTotalSupply() {
         const totalSupply = await contract.totalSupply();
         const MAX_SUPPLY = await contract.MAX_SUPPLY();
-        document.getElementById("totalSupplyText").innerText = `${totalSupply.toString()} / ${MAX_SUPPLY.toString()} Minted`;
+        document.getElementById("totalSupplyText").innerText = `${totalSupply.toString()} out of ${MAX_SUPPLY.toString()} Minted`;
       }
 
 
